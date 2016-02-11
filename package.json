@@ -1,0 +1,18 @@
+{
+  "author": "emmanuel@gifs.com",
+  "description": "GIFS.com Public-API client",
+  "repository": "https://github.com/gifs/gifs-api-node",
+  "name": "gifs-api",
+  "version": "0.0.1",
+  "dependencies": {
+    "request": ">=2.67.0"
+  },
+  "license": "MIT",
+  "main": "gifs.js",
+  "tags": [
+      "gifs", "gifs.com", "gifs-public-api", "make-gif", "convert gifs", "gifs for fun and profit"
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
