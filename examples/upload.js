@@ -1,8 +1,8 @@
 /*
  * node upload.js *.gif
- * node upload.js ~/Desktop/tricky.gif ~/Pictures/Videos/*.mp4
+ * node upload.js ~/Desktop/tricky.gif ~/Pictures/Videos/*.mp4 ~/Desktop/boondocksAirPlane.mp4
  */
-const gifs = require('gifs-api');
+const gifs = require('./../gifs');
 const fs   = require('fs');
 
 function main(argv) {

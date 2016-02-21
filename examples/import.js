@@ -3,7 +3,7 @@
  * node import.js https://vine.co/v/iq6xX5YUdIt https://twitter.com/twitter/status/699999528619905024
  */
 
-const gifs = require('gifs-api');
+const gifs = require('./../gifs');
 
 function main(argv) {
   if (argv.length < 1) {

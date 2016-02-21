@@ -17,7 +17,7 @@ then makes the equivalent files.
 * Import any media, mp4, gif, webm
 
 ```javascript
-const gifs = require('gifs-node');
+const gifs = require('gifs-api');
 
 const urls = ['https://giant.gfycat.com/ClutteredSevereCur.gif', 'https://fat.gfycat.com/JovialPerkyArmyant.webm', 'https://pbs.twimg.com/tweet_video/Ca0ztmfWIAAi-UX.mp4'];
 urls.forEach(function(url) {
@@ -44,7 +44,7 @@ urls.forEach(function(url) {
 
 ```javascript
 const fs   = require('fs');
-const gifs = require('gifs-node');
+const gifs = require('gifs-api');
 const glob = require('glob');
 
 glob('**/*.mp4', function(err, mp4Matches) {
@@ -71,7 +71,7 @@ glob('**/*.mp4', function(err, mp4Matches) {
 });
 ```
 
-* For stricter uploading, use:
+###  For stricter uploading, use:
 - gifs.uploadMP4.
 - gifs.uploadWEBM.
 - gifs.uploadGIF.
