@@ -15,10 +15,8 @@ function main(argv) {
     var readStream = fs.createReadStream(arg);
     var params = {
       file: readStream,
-      meta: {
-	title: arg,
-	tags: ["uploaded file", "uploaded example"],
-      },
+      title: arg,
+      tags: ["uploaded file", "uploaded example"],
     };
 
     gifs.upload(params, function(status, response) {

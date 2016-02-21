@@ -11,9 +11,15 @@ function main(argv) {
     process.exit(-1);
   }
 
-  argv.forEach(function(url) {
-    gifs.import(url, function(status, response) {
-      console.log('url', url, 'status', status, 'response', response);
+  argv.forEach(function(sourceURL) {
+    var params = {
+      source: sourceURL,
+      author: process.env.LOGNAME,
+      tags: ['uploads', 'api-example'],
+    };
+
+    gifs.import(params, function(status, response) {
+      console.log('url', sourceURL, 'status', status, 'response', response);
     });
   });
 }
