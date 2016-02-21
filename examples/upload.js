@@ -1,18 +1,28 @@
 /*
  * node upload.js *.gif
+ * node upload.js ~/Desktop/tricky.gif ~/Pictures/Videos/*.mp4
  */
 const gifs = require('gifs-api');
 const fs   = require('fs');
 
 function main(argv) {
-  argv.forEach(function(arg) {
-    fs.readFile(arg, function(err, stream) {
-      if (err)
-	throw err;
+  if (argv.length < 1) {
+    console.log('expecting atleast one path to upload.');
+    process.exit(-1);
+  }
 
-      gifs.upload({file: stream}, function(status, response) {
+  argv.forEach(function(arg) {
+    var readStream = fs.createReadStream(arg);
+    var params = {
+      file: readStream,
+      meta: {
+	title: arg,
+	tags: ["uploaded file", "uploaded example"],
+      },
+    };
+
+    gifs.upload(params, function(status, response) {
 	console.log('filepath', arg, 'status', status, response);
-      });
     });
   });
 }
