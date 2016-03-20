@@ -3,7 +3,7 @@
   "description": "GIFS.com Public-API client",
   "repository": "https://github.com/gifs/gifs-api-node",
   "name": "gifs-api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "dependencies": {
     "request": ">=2.67.0"
   },
