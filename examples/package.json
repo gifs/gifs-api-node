@@ -1,0 +1,11 @@
+{
+  "author": "gifs.com",
+  "name": "gifs-importer",
+  "dependencies": {
+    "gifs-api": "*",
+    "cli-spinner": "*"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
